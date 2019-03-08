@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "instore",
+    "slug": "instore",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "facebookAppId": "1975636612744355",
+    "facebookScheme": "fb1975636612744355",
+    "facebookDisplayName": "Medico",
+    "extra":{
+      "googleAppId": {
+        "ios": "99803265723-g15aiofrm3l0kmvpf4mqo3df35eq76rn.apps.googleusercontent.com",
+        "android": "99803265723-8dti26655b3cu5qsi9eddepsgl4gtdvg.apps.googleusercontent.com"
+
+      }
+      
+    }
+  }
+}
