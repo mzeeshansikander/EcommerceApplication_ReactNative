@@ -12,7 +12,8 @@
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-design-utility": "0.0.28",
-    "react-navigation": "^2.11.2"
+    "react-navigation": "^2.11.2",
+    "wretch": "1.4.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
