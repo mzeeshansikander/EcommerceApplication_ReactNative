@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {StatusBar} from 'react-native'
 import {Box,Text} from 'react-native-design-utility';
-class HomeScreen extends Component{
+class StoresScreen extends Component{
     state={
 
     }
@@ -9,10 +9,10 @@ class HomeScreen extends Component{
         return(
             <Box f={1} center>
               <StatusBar barStyle="light-content"/>
-                <Text>Home Screen </Text>
+                <Text>Stores Screen </Text>
             </Box>
 
         );
     }
 }
-export default HomeScreen;
+export default StoresScreen;

@@ -5,8 +5,10 @@ import { TouchableOpacity, Alert, Animated } from 'react-native';
 import LoginButton from '../components/LoginButton';
 import { FacebookApi } from '../api/Facebook';
 import { GoogleApi } from '../api/Google';
-const BoxAnimated = Animated.createAnimatedComponent(Box);
+import { inject,observer} from 'mobx-react/native';
 
+const BoxAnimated = Animated.createAnimatedComponent(Box);
+@inject('currentUser')
 class LoginScreen extends Component {
     state = {
         opacity: new Animated.Value(0),
@@ -34,6 +36,7 @@ class LoginScreen extends Component {
         try {
 
             const token = await GoogleApi.loginAsync();
+            await this.props.currentUser.login(token,'GOOGLE');
             console.log('token', token);
         } catch (error) {
             console.log('error', error)
@@ -43,6 +46,7 @@ class LoginScreen extends Component {
         try {
 
             const token = await FacebookApi.loginAsync();
+            await this.props.currentUser.login(token,'FACEBOOK');
             console.log('token', token);
         } catch (error) {
             console.log('error', error)

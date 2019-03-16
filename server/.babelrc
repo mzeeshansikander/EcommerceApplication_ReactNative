@@ -2,7 +2,7 @@
   "presets": ["env","stage-0"],
   "plugins": [
     "transform-class-properties",
-    "transform-decorators",
+    "babel-plugin-transform-decorators-legacy",
     [
       "transform-object-rest-spread",
 

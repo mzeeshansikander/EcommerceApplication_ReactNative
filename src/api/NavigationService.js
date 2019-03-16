@@ -1,8 +1,8 @@
-import { NavigationActions} from 'react-navitaion';
+import { NavigationActions} from 'react-navigation';
 
 let _navigator;
 
-function setTopLevelNavigaor(ref){
+function setTopLevelNavigator(ref){
     _navigator = ref;
 }
 
@@ -34,7 +34,7 @@ function reset({actions,index}){
 }
 export const NavigationService = {
     navigate,
-    setTopLevelNavigaor,
+    setTopLevelNavigator,
     back,
     popToTop,
     reset,

@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 import {PROVIDER_ENUM} from './customer.model';
 import { AuthProvider } from '../../services/authProvider';
-import {getOrCreateCustomer} from './customer';
+import {getOrCreateCustomer,me} from './customer';
 import { AuthServices } from '../../services/Auth';
 
 export const create = async (req, res) => {
@@ -36,3 +36,18 @@ export const create = async (req, res) => {
       res.status(400).json({ message: error.message });
     }
   };
+
+  export const getUserInfo = async(req,res)=>{
+    try{
+      if (req.user){
+        const userInfo = await me(req.user._id);
+        res.status(200).json(userInfo);
+
+      }else{
+        res.status(400),json({message: 'No User'});
+      }
+      
+    }catch(error){
+      res.status(400).json({message: error.message})
+    }
+  }

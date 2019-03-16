@@ -3,7 +3,7 @@
 
   greyDarkest: '#242424',
   greyDarker: '#616161',
-  greyDark: '#757575',
+  greyDark: '#8E8E93',
   grey: '#9e9e9e',
   greyLight: '#bdbdbd',
   greyLighter: '#e0e0e0',
@@ -50,6 +50,7 @@
 const theme = {
   text: {
     size: {
+      xs:10,
       sm: 14,
       base: 16,
       md: 18,
@@ -105,10 +106,10 @@ const theme = {
       shadowColor: color.black,
       shadowOffset: {
         width: 0,
-        height: 0,
+        height: -1,
       },
-      shadowOpacity: 1,
-      shadowRadius: 1,
+      shadowOpacity: 0.16,
+      shadowRadius: 4,
     },
     {
       shadowColor: color.black,
