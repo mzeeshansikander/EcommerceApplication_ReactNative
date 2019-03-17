@@ -4,6 +4,19 @@ import { NavigationService } from '../api/NavigationService';
 import { theme } from '../constants/theme';
 import TabBar from '../components/TabBar'
 
+
+const primaryHeader = {
+    headerStyle:{
+        backgroundColor: theme.color.green
+
+    },
+
+    headerTintColor: theme.color.white,
+    headerTitleStyle: {
+        fontWeight: '400'
+    }
+}
+
 const AuthNavigator = createStackNavigator(
     {
         Login:{
@@ -17,10 +30,18 @@ const AuthNavigator = createStackNavigator(
     }
 
     );
+
+const HomeStack = createStackNavigator({
+    Home:{
+        getScreen: ()=>require('./HomeScreen').default
+    },
+},
+    {
+        navigationOptions:{...primaryHeader }
+    }
+)
 const TabNavigator = createBottomTabNavigator({
-        Home:{
-            getScreen: ()=>require('./HomeScreen').default
-        },
+       Home: HomeStack,
         List:{
             getScreen: ()=>require('./ListScreen').default
         },
@@ -35,14 +56,10 @@ const TabNavigator = createBottomTabNavigator({
         tabBarComponent: props => <TabBar {...props}/>
 });
 const MainNavigator = createStackNavigator({
-    Tab: TabNavigator,
+    Tab: TabNavigator, 
 },{
     navigationOptions: {
-        headerStyle:{
-            backgroundColor: theme.color.green,
-            
-
-        }
+       header: null    
     }    
 
 });

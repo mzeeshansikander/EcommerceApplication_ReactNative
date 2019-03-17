@@ -13,6 +13,7 @@ export default class App extends React.Component {
     isReady: false
   }
   componentDidMount(){
+    console.disableYellowBox = true;
     this.cacheAssets();
   }
   cacheAssets = async()=>{
