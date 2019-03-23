@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 11410,
-  "expoServerNgrokUrl": "https://ax-mpk.anonymous.newmedico-master.exp.direct",
-  "packagerNgrokUrl": "https://packager.ax-mpk.anonymous.newmedico-master.exp.direct",
-  "ngrokPid": 11430
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
